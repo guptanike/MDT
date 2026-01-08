@@ -1,0 +1,27 @@
+body {
+    background: radial-gradient(circle at top right, #0a1931, #050b18);
+    color: #f0f9ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; min-height: 100vh;
+    display: flex; justify-content: center; padding: 40px;
+}
+.container { width: 100%; max-width: 900px; }
+.accent { color: #38bdf8; text-shadow: 0 0 10px rgba(56,189,248,0.5); }
+.glass-card {
+    background: rgba(16, 25, 45, 0.75);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 20px; padding: 30px; margin-bottom: 20px;
+}
+input, select {
+    background: #000; border: 1px solid #333; color: white;
+    padding: 12px; border-radius: 8px; width: 100%; margin-top: 5px;
+}
+.input-row { display: flex; gap: 15px; margin-bottom: 15px; }
+button {
+    background: #38bdf8; color: #050b18; font-weight: bold;
+    padding: 15px; border-radius: 10px; width: 100%; cursor: pointer; border: none;
+}
+.hidden { display: none; }
+.grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 20px; }
+.stat-box { background: rgba(56,189,248,0.1); border: 1px solid #38bdf8; padding: 15px; border-radius: 10px; text-align: center; }

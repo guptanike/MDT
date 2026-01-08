@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MDT | Butterfly Effect Engine</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MDT <span class="accent">Micro Decision Taker</span></h1>
+            <p>Predicting your future trajectory based on current habits.</p>
+        </header>
+
+        <main class="glass-card">
+            <div class="input-row">
+                <input type="text" id="dreamJob" placeholder="Your Dream Job (e.g. SDE at Google)">
+                <select id="decisionSelect">
+                    <option value="">-- Select Habit --</option>
+                    <option value="G2">Consistent Study/Coding</option>
+                    <option value="G4">Daily Exercise</option>
+                    <option value="D1">Sleeping Late</option>
+                    <option value="D3">Excess Social Media</option>
+                    <option value="D5">Eating Junk Food</option>
+                </select>
+            </div>
+            <div class="input-row">
+                <input type="number" id="frequency" placeholder="Hours per day">
+                <input type="number" id="timePeriod" placeholder="Time Period (Days)">
+            </div>
+            <button onclick="analyzeDecision()">Generate Future Projection</button>
+        </main>
+
+        <section id="resultSection" class="hidden">
+            <div class="grid">
+                <div class="chart-container glass-card">
+                    <h3 class="accent">Growth Projection</h3>
+                    <canvas id="impactChart"></canvas>
+                </div>
+                
+                <div class="advice-container glass-card">
+                    <div class="stat-box main-stat">
+                        <span id="percentVal" style="font-size: 2.5rem; color: #38bdf8;">0</span>%
+                        <p>Dream Achievement Probability</p>
+                    </div>
+                    
+                    <div class="scorecard" style="display: flex; gap: 10px; margin: 15px 0;">
+                        <div class="score-item">Health: <span id="hScore">0</span></div>
+                        <div class="score-item">Focus: <span id="fScore">0</span></div>
+                        <div class="score-item">Career: <span id="cScore">0</span></div>
+                    </div>
+        
+                    <p id="adviceText" style="border-top: 1px solid #333; padding-top: 15px;"></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
